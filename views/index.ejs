@@ -1,0 +1,33 @@
+<%- include('header'); -%>
+<main>
+    <section class="container-fluid py-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8 col-lg-6">
+                <h2 class="text-center mb-4">Subscribe to Our Newsletter to receive the best promotions</h2>
+                <p>
+                    This is just a small portion og the project delivered for Task 10.3D, I implemented a mail service using Nodemailer 
+                    to send confirmation emails and crypto to generate unique tokens for user verification. The tokens 
+                    are included in the email, allowing users to confirm their subscription or registration by clicking a 
+                    unique link. Upon clicking the link, the server verifies the token, and if valid, activates the user's account. 
+                    This ensures secure confirmation and prevents unauthorized email sending for our newsletter subscription.
+                    Additionally this makes easy for our users to unsubscribe from our service.
+                </p>
+                <form id="newsletter-form" method="POST" action="/subscribe" class="needs-validation">
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required>
+                        <div class="alert alert-danger" role="alert" style="display: none;">Please enter a valid email address.</div>
+                    </div>
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="consent" name="consent" value="true" required>
+                        <label class="form-check-label" for="consent">I agree to receive newsletters and promotional content.</label>
+                        <div class="alert alert-danger" role="alert" style="display: none;">You must agree to receive newsletters and promotional content.</div>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+</main>
+<%- include('footer'); -%>
+

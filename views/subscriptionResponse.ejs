@@ -1,0 +1,12 @@
+<%- include('header'); -%>
+    <main class="container">
+        <% if (message.startsWith('Error')) { %>
+            <h1 class="text-center">Error subscribing</h1>
+            <p><%= message %></p>
+        <% } else { %>
+            <h1 class="text-center">Thank You!</h1>
+            <p>Thanks <strong><%= message %></strong> for subscribing to our newsletter!</p>
+            <p>We have sent a confirmation email.</p>
+        <% } %>
+    </main>
+<%- include('footer'); -%>
