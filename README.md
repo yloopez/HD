@@ -1,0 +1,2 @@
+# SIT774 Task10.4
+For this feature, I implemented asynchronous calls to a MySQL database using Nodemailer and crypto. The system sends a confirmation email to new subscribers with a unique token. Once the user verifies their email, the system updates their status in the database, setting active = true, allowing them to receive the latest news from our newsletter. This approach also simplifies managing unsubscriptions, as we don’t need to delete records. Instead, we simply set active = false, and the system will automatically stop sending emails to those users.
